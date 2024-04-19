@@ -1,0 +1,26 @@
+body{
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.divInicio{
+    background-image: url("../img/imagemFundo.png");
+    background-size: cover;
+    background-position: center;
+    height: 1000px;
+    display: flex;
+}
+
+.divLetras{
+    margin-top: 7.5%;
+    max-width: 40%;
+    margin-left: 5%;
+}
+
+.divInicio h2{
+    font-size: 68px;
+    font-weight: 700;
+
+}
