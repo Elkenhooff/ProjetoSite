@@ -8,14 +8,33 @@
 </head>
 <body>
     <main>
+        <div class="divInicio2">
+            <div class="divLetras">
+                <i><h3>CdmMy Family</h3></i>
+                <h2>O Roteiro Para Uma Compra Imobiliária Bem-sucedida</h2>
+                <h3>Consórcios</h3>
+            </div>
+        </div>
         <div class="divInicio">
             <div class="divLetras">
                 <i><h3>CdmMy Family</h3></i>
                 <h2>O Roteiro Para Uma Compra Imobiliária Bem-sucedida</h2>
                 <h3>Consórcios</h3>
-                <h4>www.cdmmyfamily.com.br</h4>
             </div>
         </div>
     </main>
 </body>
 </html>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+        window.addEventListener("scroll", function(){
+            const posicaoScroll = window.scrollY;
+            if (posicaoScroll > 900){
+                document.querySelector(".divInicio").classList.add('teste');
+                document.querySelector(".divInicio .divLetras").classList.add('animacao');
+            } 
+        })
+    })
+</script>

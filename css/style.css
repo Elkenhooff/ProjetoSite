@@ -5,22 +5,72 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.divInicio{
+.divInicio {
+    position: relative;
+    height: 0px;
+    display: flex;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
+}
+
+.divInicio::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to right, rgba(255, 132, 0, 0.8), rgba(255, 132, 0, 0));
+    z-index: 1;
+}
+
+.divInicio::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     background-image: url("../img/imagemFundo.png");
     background-size: cover;
-    background-position: center;
-    height: 1000px;
-    display: flex;
+    z-index: 0;
+}
+
+.divInicio.teste{
+    height: 1080px;
+    opacity: 1;
+    visibility: visible;
 }
 
 .divLetras{
     margin-top: 7.5%;
     max-width: 40%;
     margin-left: 5%;
+    z-index: 2;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 1s ease, transform 1s ease;
 }
 
+.divLetras.animacao{
+    opacity: 1;
+    transform: translateY(0);
+    z-index: 2;
+  }
+
 .divInicio h2{
-    font-size: 68px;
+    font-size: 66px;
     font-weight: 700;
 
+}
+
+.divInicio h3{
+    font-size: 28px;
+    font-weight: 700;
+
+}
+
+.divInicio2{
+    min-height: 1080px;
 }
